@@ -1,0 +1,11 @@
+resources:
+  pipelines:
+    test_dab:
+      name: test_dab
+      libraries:
+        - glob:
+            include: transformations/**
+      serverless: true
+      catalog: workspace
+      schema: ${workspace.current_user.short_name}
+      root_path: .

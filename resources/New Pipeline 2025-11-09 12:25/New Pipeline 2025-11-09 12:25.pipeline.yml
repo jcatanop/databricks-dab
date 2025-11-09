@@ -1,0 +1,11 @@
+resources:
+  pipelines:
+    New_Pipeline_2025_11_09_12_25:
+      name: New Pipeline 2025-11-09 12:25
+      libraries:
+        - glob:
+            include: transformations/**
+      serverless: true
+      catalog: workspace
+      schema: ${workspace.current_user.short_name}
+      root_path: .
